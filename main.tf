@@ -1,5 +1,5 @@
 provider "aws" {
-  region = us-east-1
+  region = "us-east-1"
 }
 
 variable "ami_value" {
@@ -18,7 +18,9 @@ variable "key_value" {
 }
 
 resource "aws_instance" "Newterraform" {
-  
+  ami = var.ami_value
+  instance_type = var.instance_type
+  key_name = var.key_value
 }
 
 resource "aws_s3_bucket" "my_first_bucket" {
