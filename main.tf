@@ -8,15 +8,15 @@ resource "aws_instance" "Newterraform" {
   key_name = var.key_value
 
     tags = {
-    name = "instance"
+    Name = "my_instance"
   }
 }
 
 resource "aws_s3_bucket" "my_first_bucket" {
-  bucket = var.aws_s3_bucket 
-
+  bucket = var.bucket_name
+ 
   tags = {
     Environment = "dev"
-    Purpose     = "My first Terraform bucket"
+    Purpose     = var.bucket_name
   }
 }

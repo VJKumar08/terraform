@@ -13,7 +13,8 @@ variable "key_value" {
     default = "Vijay-Test-Key-pair"  
 }
 
-variable "aws_s3_bucket" {
-  description = "S3 bucket"
-  default = "terraform_s3_bucket"
+variable "bucket_name" {
+  type        = string
+  default     = "terraform-s3-bucket"
+  description = "The name of the S3 bucket to create"
 }
