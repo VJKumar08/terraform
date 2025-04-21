@@ -8,15 +8,7 @@ resource "aws_instance" "Newterraform" {
   key_name = var.key_value
 
     tags = {
-    Name = "my_instance"
+    Name = var.instance_name
   }
 }
 
-resource "aws_s3_bucket" "my_first_bucket" {
-  bucket = var.bucket_name
- 
-  tags = {
-    Environment = "dev"
-    Purpose     = var.bucket_name
-  }
-}
