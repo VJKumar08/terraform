@@ -2,11 +2,9 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "Newterraform" {
-  ami = var.ami_value
-  instance_type = var.instance_type
-  key_name = var.key_value
-
-   
+module "ec2_instances" {
+  source = "./modules"
+  ami_value = "ami-0e449927258d45bc4"
+  instance_type = "t2.micro"
+  key_value = "Vijay-Test-Key-pair"
 }
-
