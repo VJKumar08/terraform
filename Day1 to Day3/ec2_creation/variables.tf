@@ -13,3 +13,10 @@ variable "key_value" {
     #default = "Vijay-Test-Key-pair"  
 }
 
+variable "instanceName_value" {
+  description = "instance name tag value"
+}
+
+variable "instanceclienttag_value" {
+  description = "instance client tag value"
+}
